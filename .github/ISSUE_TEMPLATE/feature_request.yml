@@ -1,0 +1,43 @@
+name: Feature request
+description: 建议一个改进（新库支持、新导出格式、更好用的参数等）
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        说明**使用场景**比说明实现方式更有用：你想拿到什么数据、现在卡在哪一步。
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 你现在的完整工作流是什么，哪一步最费时
+      placeholder: 每月要更新 12 个省的播种面积，现在得手工改 12 次 --dims
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你希望的用法
+      render: bash
+      placeholder: |
+        eps-client query --cube 900 --select provinces.json --out by_province.csv
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 你试过的替代方案
+      placeholder: 手动循环调 12 次，每次都重新 login 一次太慢
+    validations:
+      required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 边界确认
+      description: 本项目不做越权、批量爬全库或绕过平台限制
+      options:
+        - label: 这个需求只使用我账号已订阅的数据
+          required: true
+        - label: 不涉及自动发短信验证码 / 绕过滑块 / 破解频控
+          required: true

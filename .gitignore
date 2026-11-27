@@ -1,0 +1,41 @@
+# 数据产物 —— 取数结果不进仓库
+*.csv
+*.xlsx
+*.xls
+*.dta
+out/
+output/
+data/
+exports/
+
+# 凭据 / 会话 —— 绝不进仓库
+.eps_sid
+.eps_sid.*
+credentials.json
+*.token
+*.pem
+*.key
+.env
+.env.*
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

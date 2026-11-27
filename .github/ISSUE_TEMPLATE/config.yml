@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全问题
+    url: https://github.com/HeIIoAgain/dsh-eps-data-platform/security/advisories/new
+    about: 凭据泄露、越权等问题请走私密渠道，不要开公开 Issue。
+  - name: EPS 平台本身的问题
+    url: https://olap.epsnet.com.cn
+    about: 账号开通、订阅权限、网页端报错请联系平台客服，本项目只是客户端。
