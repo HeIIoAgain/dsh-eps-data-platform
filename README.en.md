@@ -1,10 +1,10 @@
 # dsh-eps-data-platform
+**This tool fetches data by calling the [EPS 数据平台](https://olap.epsnet.com.cn) Web API** — it is not a
+scraper and not an official client — turning the web UI's "log in → pick a cube → find the indicator →
+tick years → export" click-path into one repeatable command.
 
-A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) skill **and** command-line
-client for pulling data out of the [EPS 数据平台](https://olap.epsnet.com.cn) (China macro,
-industry, regional and listed-company statistics): it turns the web UI's
-"log in → pick a cube → find the indicator → tick years → export" click-path into one repeatable
-command.
+Two ways to use it: as a DeepSeek Harness skill for an agent (`SKILL.md`), or as the `eps-client`
+command for manual pulls and exports.
 
 [![CI](https://github.com/HeIIoAgain/dsh-eps-data-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/HeIIoAgain/dsh-eps-data-platform/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

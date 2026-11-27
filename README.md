@@ -1,7 +1,8 @@
 # dsh-eps-data-platform
-
-从 [EPS 数据平台](https://olap.epsnet.com.cn) 取数的 DeepSeek Harness 技能 + 命令行客户端：
+**本工具通过调用 [EPS 数据平台](https://olap.epsnet.com.cn) 的 Web API 取数**（不是网页抓取，也不是官方客户端），
 把网页上「登录 → 选库 → 挑指标 → 查数 → 导表」这一串点击，变成一条可以重复执行的命令。
+
+两种用法：作为 DeepSeek Harness 技能交给 Agent（`SKILL.md`），或直接用命令行 `eps-client` 手动取数、导表。
 
 [![CI](https://github.com/HeIIoAgain/dsh-eps-data-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/HeIIoAgain/dsh-eps-data-platform/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

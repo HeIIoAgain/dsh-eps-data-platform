@@ -73,6 +73,15 @@ def test_readme_badges_point_at_this_repo():
                 or url.startswith("https://img.shields.io/")), f"badge points elsewhere: {url}"
 
 
+def test_readme_discloses_api_dependency_in_first_two_lines():
+    """第一屏就要说清楚：这是调 EPS 数据平台 Web API 的工具，不是网页抓取。"""
+    for name in ("README.md", "README.en.md"):
+        head = "\n".join((ROOT / name).read_text(encoding="utf-8").splitlines()[:2])
+        assert "EPS" in head, f"{name} 开头两行没提 EPS"
+        assert "API" in head, f"{name} 开头两行没说明是调 API"
+        assert "olap.epsnet.com.cn" in head, f"{name} 开头两行没给出 API 域名"
+
+
 def test_required_root_files_exist():
     for name in (
         "README.md",
